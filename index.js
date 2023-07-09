@@ -1,4 +1,6 @@
-const http = require('http')
+import http from "https"
+import { pokemon,chimchar,bulbasaur } from "./package.js"
+console.log(pokemon,chimchar,bulbasaur)
 const server = http.createServer((req,res)=>{
     if(req.url==='/about'){
         res.end("about page")
