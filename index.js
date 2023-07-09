@@ -1,5 +1,7 @@
-import http from "https"
+import http from "http"
 import { pokemon,chimchar,bulbasaur } from "./package.js"
+import {lovePercent} from "./lovePercent.js"
+console.log(lovePercent())
 console.log(pokemon,chimchar,bulbasaur)
 const server = http.createServer((req,res)=>{
     if(req.url==='/about'){
@@ -10,6 +12,10 @@ const server = http.createServer((req,res)=>{
     }
     else if(req.url==='/'){
         res.end("home page")
+
+    }
+    else if (req.url==='/love'){
+        res.end(`love percentage is ${lovePercent()}%`)
     }
     else if(req.url==='/info'){
         res.end("info page")
