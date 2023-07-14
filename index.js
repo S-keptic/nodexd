@@ -23,7 +23,7 @@ const server = http.createServer((req,res)=>{
             fs.readFile('index.html',(err,data)=>{
                 res.end(data)
             })
-
+  
     }
     else if (req.url==='/love'){
         res.end(`love percentage is ${lovePercent()}%`)
